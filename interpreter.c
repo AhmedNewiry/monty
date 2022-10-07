@@ -16,19 +16,22 @@ int main(int argc, char **argv)
 	long int x;
 
 	if (argc != 2)
-		printf("USAGE: monty file\n");
-		exit(EXIT_FAILURE);
+	{
+		printf("USAGE: monty file\n"), exit(EXIT_FAILURE);
+	}
 	f_ptr = fopen(argv[1], "r");
 	if (f_ptr == NULL)
-		printf("Error: Can't open file %s\n", argv[1]);
-		exit(EXIT_FAILURE);
+	{
+		printf("Error: Can't open file %s\n", argv[1]), exit(EXIT_FAILURE);
+	}
 	fseek(f_ptr, 0, SEEK_END);
 	x = ftell(f_ptr);
 	fseek(f_ptr, 0, SEEK_SET);
 	buffer = malloc(sizeof(char) * x);
 	if (!buffer)
-		printf("Error: malloc failed\n");
-		exit(EXIT_FAILURE);
+	{
+		printf("Error: malloc failed\n"), exit(EXIT_FAILURE);
+	}
 	fread(buffer, 1, x, f_ptr);
 	tok_buff = mod_strtok(buffer, "$\n\t\r ");
 	while (tok_buff[i])
