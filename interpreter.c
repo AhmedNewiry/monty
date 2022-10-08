@@ -58,7 +58,7 @@ void op_handler(stack_t **head, char **op_tokens, unsigned int l_n, int j)
 		else
 		{
 			stack_handler(op_tokens[j], head, l_n);
-			if (strcmp(op_tokens[j], "pall")
+			if (strcmp(op_tokens[j], "pall") == 0)
 			{
 				break;
 			}
