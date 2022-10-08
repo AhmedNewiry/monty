@@ -35,6 +35,10 @@ int main(int argc, char **argv)
 
 
 		line_number++;
+		if (strcmp(buffer, "\n") == 0)
+		{
+			continue;
+		}
 		op_tokens = mod_strtok(buffer, "$\n\t ");
 		j = 0;
 		op_handler(&head, op_tokens, line_number, j);
