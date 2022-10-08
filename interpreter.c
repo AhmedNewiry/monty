@@ -50,22 +50,6 @@ void op_handler(stack_t **head, char **op_tokens, unsigned int l_n, int j)
 {
 	if (strcmp(op_tokens[j], "push") == 0)
 	{
-<<<<<<< HEAD
-=======
-		if (strcmp(op_tokens[j], "push") == 0)
-		{
-			j++;
-			push(head, op_tokens[j], l_n);
-		}
-		else
-		{
-			stack_handler(op_tokens[j], head, l_n);
-			if (strcmp(op_tokens[j], "pall") == 0)
-			{
-				break;
-			}
-		}
->>>>>>> 293b77d0e3d072d1057b3fe782127e778e326dff
 		j++;
 		push(head, op_tokens[j], l_n);
 	}
