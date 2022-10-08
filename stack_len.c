@@ -7,7 +7,7 @@
 
 
 size_t stack_len(const stack_t *h)
-i{
+{
 	int i = 0;
 
 	while (h)

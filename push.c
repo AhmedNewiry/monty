@@ -12,8 +12,10 @@ void push(stack_t **head, char *n, unsigned int line_number)
 	int num_idx = 0, num_ed;
 
 	if (!n)
+	{
 		fprintf(stderr, "L%d: usage: push integer%s\n", line_number, n);
 		exit(EXIT_FAILURE);
+	}
 	while (n[num_idx] != '\0')
 	{
 		if (n[0] == '-' && num_idx == 0)
@@ -44,7 +46,6 @@ void push(stack_t **head, char *n, unsigned int line_number)
 	}
 	else
 	{
-		fprintf(stderr, "Error: malloc failed\n");
-		exit(EXIT_FAILURE);
+		fprintf(stderr, "Error: malloc failed\n"), exit(EXIT_FAILURE);
 	}
 }
