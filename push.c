@@ -13,7 +13,7 @@ void push(stack_t **head, char *n, unsigned int line_number)
 
 	if (!n)
 	{
-		fprintf(stderr, "L%d: usage: push integer%s\n", line_number, n);
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	while (n[num_idx] != '\0')
