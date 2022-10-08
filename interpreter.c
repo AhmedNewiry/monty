@@ -48,21 +48,13 @@ int main(int argc, char **argv)
 
 void op_handler(stack_t **head, char **op_tokens, unsigned int l_n, int j)
 {
-	while (op_tokens[j])
+	if (strcmp(op_tokens[j], "push") == 0)
 	{
-		if (strcmp(op_tokens[j], "push") == 0)
-		{
-			j++;
-			push(head, op_tokens[j], l_n);
-		}
-		else
-		{
-			stack_handler(op_tokens[j], head, l_n);
-			if (strcmp(op_tokens[j], "pall")
-			{
-				break;
-			}
-		}
 		j++;
+		push(head, op_tokens[j], l_n);
+	}
+	else
+	{
+		stack_handler(op_tokens[j], head, l_n);
 	}
 }
