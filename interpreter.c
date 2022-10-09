@@ -13,11 +13,9 @@ int main(int argc, char **argv)
 	char *buffer, **op_tokens = NULL;
 	stack_t *head = NULL;
 	FILE *f_ptr;
-
 	int j = 0;
 	size_t n = 0;
 	unsigned int line_number = 0;
-
 
 	if (argc != 2)
 	{
