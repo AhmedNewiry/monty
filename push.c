@@ -25,7 +25,7 @@ void push(stack_t **head, char *n, unsigned int line_number)
 		}
 		if (!isdigit(n[num_idx]))
 		{
-			fprintf(stderr, "L%d: unknown instruction %s\n", line_number, n);
+			fprintf(stderr, "L%d: push integer\n", line_number);
 			exit(EXIT_FAILURE);
 		}
 		num_idx++;
