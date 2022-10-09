@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 		}
 		op_tokens = mod_strtok(buffer, "\n\t\r ");
 		j = 0;
-		if(!op_tokens[0] || strcmp(op_tokens[0], "#") == 0)
+		if (!op_tokens[0] || strcmp(op_tokens[0], "#") == 0)
 		{
 			continue;
 		}
