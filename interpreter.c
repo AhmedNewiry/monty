@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 		{
 			continue;
 		}
-		op_tokens = mod_strtok(buffer, "$\n\t ");
+		op_tokens = mod_strtok(buffer, "\n\t\r ");
 		j = 0;
 		op_handler(&head, op_tokens, line_number, j);
 
