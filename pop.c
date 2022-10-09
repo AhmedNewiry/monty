@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
  * pop- a function that deletes the stack first node
- * @h: double pointer to the linked list head
+ * @head: double pointer to the linked list head
  * @line_number: instruction line number
  */
 void pop(stack_t **head, unsigned int line_number)
@@ -25,5 +25,4 @@ void pop(stack_t **head, unsigned int line_number)
 		(*(head))->prev = NULL;
 	}
 	free(temp);
-	return;
 }
