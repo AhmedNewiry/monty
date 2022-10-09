@@ -55,7 +55,13 @@ int main(int argc, char **argv)
 }
 
 
-
+/**
+ * op_handler- handles commands
+ * @head: double pointer to thes stack head
+ * @op_tokens: line tokens
+ * @l_n: instructon line number
+ * @j: token indes
+ */
 void op_handler(stack_t **head, char **op_tokens, unsigned int l_n, int j)
 {
 	if (strcmp(op_tokens[j], "push") == 0)
