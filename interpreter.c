@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 
 	}
 	fclose(f_ptr), free(buffer), free_stack(head), free(op_tokens);
-	return (0);
+	return (EXIT_SUCCESS);
 }
 
 
