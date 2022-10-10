@@ -20,6 +20,7 @@ int stack_handler(char *code, stack_t **stack, unsigned int line_number)
 		{"div", _div},
 		{"mod", mod},
 		{"mul", mul},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 
