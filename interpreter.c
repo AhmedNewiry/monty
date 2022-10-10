@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 		j = 0;
 		if (!op_tokens[0] || strcmp(op_tokens[0], "#") == 0)
 		{
-			free(op_optokens);
+			free(op_tokens);
 			continue;
 		}
 		op_handler(&head, op_tokens, line_number, j);
