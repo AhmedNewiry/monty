@@ -46,7 +46,7 @@ int main(int argc, char **argv)
 		op_handler(&head, op_tokens, line_number, j);
 
 	}
-	fclose(f_ptr), free(buffer), free_stack(head), free(op_tokens);
+	fclose(f_ptr), free(buffer), free_stack(head);
 	return (EXIT_SUCCESS);
 }
 
