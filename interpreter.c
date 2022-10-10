@@ -28,12 +28,9 @@ int main(int argc, char **argv)
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-
-
 	while (getline(&buffer, &n, f_ptr) != -1)
 	{
-
-
+		op_tokens = NULL;
 		line_number++;
 		if (strcmp(buffer, "\n") == 0)
 		{
@@ -43,6 +40,7 @@ int main(int argc, char **argv)
 		j = 0;
 		if (!op_tokens[0] || strcmp(op_tokens[0], "#") == 0)
 		{
+			free(op_optokens);
 			continue;
 		}
 		op_handler(&head, op_tokens, line_number, j);
@@ -71,4 +69,5 @@ void op_handler(stack_t **head, char **op_tokens, unsigned int l_n, int j)
 	{
 		stack_handler(op_tokens[j], head, l_n);
 	}
+	free(op_tokens);
 }
